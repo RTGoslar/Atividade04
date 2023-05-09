@@ -1,4 +1,4 @@
-  /*Faça um programa de calculadora simples com as seguintes operações possíveis: adição, subtração, multiplicação e divisão. O programa inicia apresentando ao usuário um menu de opções com mostrado abaixo:
+ /*Faça um programa de calculadora simples com as seguintes operações possíveis: adição, subtração, multiplicação e divisão. O programa inicia apresentando ao usuário um menu de opções com mostrado abaixo:
         *Calculadora.
         *Opção possíveis:
 
@@ -30,7 +30,7 @@
                 Console.Write("\nVoltar ao inicio [s/n] : ");
                 char retorna = char.Parse(Console.ReadLine());
 
-                 if (retorna == 's')
+                if (retorna == 's')
                 {
                     goto inicio;
                 }
