@@ -1,0 +1,15 @@
+//Faça um programa que leia um número N, some todos os números inteiros de 1 a N, e mostre o resultado obtido.
+
+            Console.Write("Informe o número: ");
+            int final = int.Parse(Console.ReadLine());
+
+            int inicio = 1, soma = 0;
+
+            for (int i = inicio; i < final + 1; i++)
+            {
+                soma = soma + i;
+            }
+
+            Console.Write($"A soma dos números de 1 a {final} é : {soma}");
+
+            Console.ReadKey();

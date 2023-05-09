@@ -1,0 +1,47 @@
+/*Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo(M/F) e salário. Faça um programa que informe:
+            a) a média de salário do grupo;
+            b) a maior e a menor idade do grupo;
+            c) a quantidade de mulheres */
+
+            Console.Write(" Informe a quantidade de Habitantes: ");
+            double hab = double.Parse(Console.ReadLine());
+
+            double media, sl = 0, maioridade = 0, menoridade = 100, mulher = 0, res = 0, fi = 0;
+
+            for (int i = 1; i <= hab; i++)
+            {
+                Console.Write($"\n Informe o salário habitante {i}: ");
+                double salario = double.Parse(Console.ReadLine());
+
+                Console.Write($"Informe o sexo do habitante {i} Feminino (1) / masculino (2): ");
+                double sexo = double.Parse(Console.ReadLine());
+
+                Console.Write($"Informe a idade habitante {i}: ");
+                double idade = double.Parse(Console.ReadLine());
+
+                if (idade > maioridade)
+                {
+                    maioridade = idade;
+                }
+
+                if (idade < menoridade)
+                {
+                    menoridade = idade;
+                }
+
+                if (sexo == 1)
+                {
+                    mulher++;
+                }
+
+                res = mulher;
+
+                sl = sl + salario;
+            }
+
+            fi = hab - res;
+            media = sl / hab;
+
+            Console.Write($"\n Média dos salários {media:C} a maior idade do grupo {maioridade} a menor idade {menoridade} quantidade de mulheres {res}");
+
+            Console.ReadKey();

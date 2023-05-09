@@ -1,0 +1,12 @@
+    //Some os números de 1 a 100 e imprima o valor.
+
+            int inicio = 1, final = 101, soma = 0;
+
+            for (int i = inicio; i < final; i++)
+            {
+                soma = soma + i;
+            }
+
+            Console.WriteLine($" A soma dos Números de 1 a 100 é: {soma}");
+
+            Console.ReadKey();

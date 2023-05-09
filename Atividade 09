@@ -1,0 +1,29 @@
+ //Crie um programa que peça 10 números inteiros e apresente: a média, o maior e o menor.
+
+            int soma = 0, media, quant = 0, maior = 0, menor = 100;
+
+            for (int i = 1; i <= 10; i++)
+            {
+
+                Console.Write($"Informe o {i} número: ");
+                int numero = int.Parse(Console.ReadLine());
+
+                soma = soma + numero;
+                quant++;
+
+                if (numero > maior)
+                {
+                    maior = numero;
+                }
+
+                if (menor > numero)
+                {
+                    menor = numero;
+                }
+            }
+
+            media = soma / quant;
+
+            Console.Write($" A média dos valores é {media}, o maior digitado foi {maior} e o menor digitado {menor}");
+
+            Console.ReadKey();

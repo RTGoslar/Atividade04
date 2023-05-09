@@ -1,0 +1,77 @@
+  /*Faça um programa de calculadora simples com as seguintes operações possíveis: adição, subtração, multiplicação e divisão. O programa inicia apresentando ao usuário um menu de opções com mostrado abaixo:
+        *Calculadora.
+        *Opção possíveis:
+
+        1 - Adição
+        2 - Subtração
+        3 - Multiplicação
+        4 - Divisão
+        5 - Sair do programa
+
+        Entre com sua opção:
+
+         Crie um programa que apresentao menu inicial acima e retona a opção do usuário para o programa principal. Esta opção é então analisada e o programa chama as funções de adição, situação, multiplicação e divisão
+        conforme a opção do usuário. Se a opção for inválida, informe ao usuário e peça a ele para entrar com uma opção válida. Após a execução da operação o programa volta a apresentar o menu inicial até que o usuário
+        encerre o programa com a opção 5.*/
+        inicio:
+            Console.Clear();
+            Console.WriteLine("==================================");
+            Console.WriteLine("          Calculadora");
+            Console.WriteLine("==================================\n");
+            Console.WriteLine("1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Sair do Programa");
+
+            Console.Write("\nEscolha a operação desejada: ");
+            int operacao = int.Parse(Console.ReadLine());
+
+            if (operacao > 5)
+            {
+                Console.Write(" Valor digitado é invalido !!!");
+
+                Console.Write("\nVoltar ao inicio [s/n] : ");
+                char retorna = char.Parse(Console.ReadLine());
+
+                 if (retorna == 's')
+                {
+                    goto inicio;
+                }
+
+                else if (retorna == 'n')
+                {
+                    return;
+                }
+
+            }
+
+            Console.Write("\nInforme o PRIMEIRO número da operação : ");
+            double numero1 = double.Parse(Console.ReadLine());
+
+            Console.Write("\nInforme o SEGUNDO número da operação : ");
+            double numero2 = double.Parse(Console.ReadLine());
+            double soma;
+            if (operacao == 1)
+            {
+                soma = numero1 + numero2;
+                Console.Write($" A soma de {numero1} + {numero2} = {soma}");
+            }
+            else if (operacao == 2)
+            {
+                soma = numero1 - numero2;
+                Console.Write($" A subtração de {numero1} - {numero2} = {soma}");
+            }
+            else if (operacao == 3)
+            {
+                soma = numero1 * numero2;
+                Console.Write($" A multiplicação de {numero1} X {numero2} = {soma}");
+            }
+            else if (operacao == 4)
+            {
+                soma = numero1 / numero2;
+                Console.Write($" A divisão de {numero1} / {numero2} = {soma}");
+            }
+            else if (operacao == 5)
+            {
+                return;
+            }
+
+
+            Console.ReadKey();

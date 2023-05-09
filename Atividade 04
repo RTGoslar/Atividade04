@@ -1,0 +1,26 @@
+  /*Construa um programa que, para um drupo de 50 valores inteiros, determine:
+              a) A soma dos números positivos;
+              b) A quantidade de valores negativos;*/
+
+            int inicio = 1;
+            int final = 50;
+            int count = 0;
+            int soma_positivos = 0;
+
+            for (int i = inicio; i <= final; i++)
+            {
+
+
+                if (i % 2 == 0)
+                {
+                    soma_positivos = soma_positivos + i;
+                }
+                if (i % 2 == 1)
+                {
+                    count++;
+                }
+
+            }
+            Console.WriteLine($"A soma dos números positivos é {soma_positivos}, e a quantidade de números impares é {count}");
+
+            Console.ReadKey();

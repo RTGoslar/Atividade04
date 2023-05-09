@@ -1,0 +1,15 @@
+  //Faça um programa que leia um número de 1 até 10 e imprima a tabuada.
+
+            Console.Write("Infome a taboada de qual número você deseja: ");
+            int taboada = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("======================================");
+            Console.WriteLine($"Taboada de {taboada}");
+            Console.WriteLine("======================================");
+
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine($"{taboada} x {i} = {taboada * i}");
+            }
+
+            Console.ReadKey();

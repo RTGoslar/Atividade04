@@ -1,0 +1,48 @@
+/*Um hotel com 30 quartos cobra R$ 50,00 por diária e mais uma taxa de serviços.A taxa de serviço é de:
+            R$ 4,00 por diária, se o número de diárias for < 15;
+            R$ 3,60 por diária, se o número de diárias for = 15;
+            R$ 3,00 por diária, se o número de diárias for > 15.
+            Faça um programa que imprima o nome e o total da conta de cada cliente do hotel.
+            Imprima também o total ganho pelo hotel.*/
+
+            Console.WriteLine(" Cálculo dos Hóspedes !!!");
+
+            double diaria = 0, total = 0, lucro = 0, count = 0, dias = 0;
+            string cliente = null;
+
+            for (double i = 1; i <= 30; i++)
+            {
+                Console.Write($"\nInforme o nome do cliente {i} : ");
+                string clientecadastrado = (Console.ReadLine());
+
+                cliente = clientecadastrado;
+
+                Console.Write($"\nInforme as dirias do cliente {i} : ");
+                double dia = double.Parse(Console.ReadLine());
+
+                count++;
+
+                diaria = dia * 50.00;
+                dias = dia;
+
+                if (dia < 15)
+                {
+                    total = dia * 4 + diaria;
+                }
+                else if (dia == 15)
+                {
+                    total = dia * 3.60 + diaria;
+                }
+                else if (dia > 15)
+                {
+                    total = dia * 3 + diaria;
+                }
+
+                lucro = total * count;
+
+                Console.WriteLine($"\nO cliente {cliente} ficou {dias} diarias, no total de : {total:C}");
+            }
+
+            Console.WriteLine($"\nO lucro todas do hotel foi {lucro:C}");
+
+            Console.ReadKey();

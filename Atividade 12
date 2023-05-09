@@ -1,0 +1,38 @@
+ /*Faça um programa que calcule a média de salários de uma empresa, pedindo ao usuário o nome dos funcionários e os salários e devolvendo a média,
+             o salário mais alto e o salário mais baixo. Use nome = "fim" para encerrar a leitura.*/
+
+            Console.WriteLine("#### Calculo da Empresa ####");
+
+            Console.Write("\nInforme a quantidade de funcionários:  ");
+            double fun = double.Parse(Console.ReadLine());
+
+            double maiorsalario = 0, menorsalario = 10000, media = 0, count = 0, sl = 0;
+
+            for (int i = 1; i <= fun; i++)
+            {
+
+                Console.Write($"\nInforme o nome do funcionário {i}: ");
+                string nome = Console.ReadLine();
+
+                Console.Write($"Informe o sário do funcionário {nome}: ");
+                double salario = double.Parse(Console.ReadLine());
+
+                if (salario < menorsalario)
+                {
+                    menorsalario = salario;
+                }
+                if (salario > maiorsalario)
+                {
+                    maiorsalario = salario;
+                }
+                sl = sl + salario;
+                count++;
+            }
+
+            media = sl / fun;
+
+            Console.Write($"\na média dos salários é {media:C} o menor salário é {menorsalario:C} e o maior {maiorsalario:C}");
+
+            Console.Write("\nFIM");
+
+            Console.ReadKey();

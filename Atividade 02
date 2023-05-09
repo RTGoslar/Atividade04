@@ -1,0 +1,19 @@
+  //Faça um programa que imprima todos os números inteiros de 1 a N (fornecido pelo usuário).
+
+            Console.Write("Informe Um valor: ");
+            int final = int.Parse(Console.ReadLine());
+
+            int inicio = 1;
+         
+            while (inicio <= final)
+            {
+                Console.Write(inicio.ToString());
+                inicio++;
+
+                if (inicio <= final )
+                {
+                    Console.Write($", ");
+                }
+            }
+
+            Console.ReadKey();

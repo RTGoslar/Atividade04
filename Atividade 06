@@ -1,0 +1,36 @@
+ /*Para uma turma de 45 alunos, construa um programa que determine:
+             a) A idade média dos alunos com menos de 1,70m de altura;
+             b) A altura média dos alunos com mais de 20 anos.
+            */
+            int idademedia = 0, somaidade = 0,
+                alturamedia = 0, somaaltura = 0;
+
+            float mediaidade, mediaaltura;
+
+            for (int i = 1; i <= 45; i++)
+            {
+                Console.Write("Informe a idade do aluno: ");
+                int idade = int.Parse(Console.ReadLine());
+
+                Console.Write("Informe a altura do aluno em metros: ");
+                int altura = int.Parse(Console.ReadLine());
+
+                if (altura <= 170)
+                {
+                    idademedia += idade;
+                    somaidade++;
+                }
+                if (idade > 20)
+                {
+                    alturamedia += altura;
+                    somaaltura++;
+                }
+            }
+            mediaidade = idademedia / somaidade;
+            mediaaltura = alturamedia / somaaltura;
+
+            Console.WriteLine($"Idade média dos alunos com menos de 1.70m: {mediaidade}\n");
+
+            Console.WriteLine($"Altura média dos alunos com mais de 20 anos: {mediaaltura}");
+
+            Console.ReadKey();
